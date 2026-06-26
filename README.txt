@@ -27,9 +27,21 @@ Please note, require/import is supported in a limited manner for Remix supported
 For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
 For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
 
+
+How to use it:
+# Fill .env file first
+
+# Create Virtual Environment (there is already virtual environment in this repository but sometimes it's broken so you must recreate it)
 python -m venv .venv
-pip install -r requirements.txt
+
+# Activate Virtual Environment
+# In cmd.exe
+.venv\Scripts\activate.bat
+# In PowerShell
 .venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r requirements.txt
 
 python msds_cli.py register --id MSDS-001 --file test_files/acetone_msds.txt
 python msds_cli.py verify --id MSDS-001 --file test_files/acetone_msds.txt
